@@ -4,7 +4,7 @@ import navigationStrings from '../../constants/navigationStrings';
 import HeaderComponent from '../../components/HeaderComponent';
 
 const ProfileScreen = ({navigation, route}) => {
-  console.log('profile props', route.params.title);
+  console.log('profile props    ', route.params.title);
   const title = route.params.title;
   const goToScreen = () => {
     navigation.navigate(navigationStrings.EXPLORE);
