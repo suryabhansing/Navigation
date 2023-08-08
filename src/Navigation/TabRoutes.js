@@ -16,6 +16,15 @@ function TabRoutes() {
         headerShown: false,
         tabBarActiveTintColor: 'red',
         tabBarInactiveTintColor: 'gray',
+        // tabBarShowLabel: false,
+        // tabBarActiveBackgroundColor: 'green',
+        tabBarStyle: {
+          backgroundColor: 'white',
+          position: 'absolute',
+          borderRadius: 50,
+          bottom: 20,
+          marginHorizontal: 10,
+        },
       }}>
       <Tab.Screen
         name={navigationStrings.HOME}
