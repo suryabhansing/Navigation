@@ -3,4 +3,7 @@ export default {
   PROFILE: 'Profile',
   EXPLORE: 'Explore',
   TABS: 'Tabs',
+  SEARCH: 'Search',
+  EDIT_PROFILE: 'Edit_Profile',
+  PRODUCT_DETAILS: 'Product_Details',
 };

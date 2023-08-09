@@ -6,9 +6,13 @@ const HeaderComponent = ({goBack, title}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={!!goBack ? goBack : () => navigation.goBack()}>
-        <Text>Goback</Text>
-      </TouchableOpacity>
+      {!!goBack ? (
+        <TouchableOpacity
+          onPress={!!goBack ? goBack : () => navigation.goBack()}>
+          <Text>Goback</Text>
+        </TouchableOpacity>
+      ) : null}
+
       <Text>{title}</Text>
     </View>
   );
@@ -22,6 +26,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 42,
+    borderBottomWidth: 2,
     backgroundColor: 'red',
+    paddingHorizontal: 20,
   },
 });
