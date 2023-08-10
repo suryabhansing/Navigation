@@ -7,15 +7,15 @@ const ProfileScreen = ({navigation, route}) => {
   // console.log('profile props    ', route.params.title);
   // const title = route.params.title;
   const goToScreen = () => {
-    navigation.navigate(navigationStrings.EXPLORE);
+    navigation.navigate(navigationStrings.EDIT_PROFILE);
   };
   return (
     <View style={styles.container}>
       <SafeAreaView>
         <HeaderComponent title="Profile Screen" />
-        <Text>thi is Profile</Text>
+
         {/* <Text>{title}</Text> */}
-        <Button title="Go to Explore" onPress={() => goToScreen()} />
+        <Button title="Edit Profile" onPress={() => goToScreen()} />
       </SafeAreaView>
     </View>
   );
