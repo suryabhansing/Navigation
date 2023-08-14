@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {HomeScreen, ProfileScreen, ExploreScreen} from '../Screens/index';
 import navigationStrings from '../constants/navigationStrings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Image} from 'react-native';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const Tab = createBottomTabNavigator();
 
