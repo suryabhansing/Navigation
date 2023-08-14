@@ -12,6 +12,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MainStack from './MainStack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import TabRoutes from './TabRoutes';
+import CustomDrawer from '../components/CustomDrawer';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -22,12 +23,14 @@ function Routes() {
       <Drawer.Navigator
         screenOptions={{
           headerShown: false,
-          drawerStyle: {
-            backgroundColor: 'white',
-            borderRadius: 10,
-            width: '90%',
-          },
-        }}>
+          // drawerStyle: {
+          //   backgroundColor: 'white',
+          //   borderRadius: 10,
+          //   width: '90%',
+          // },
+          // drawerType: 'slide',
+        }}
+        drawerContent={props => <CustomDrawer {...props} />}>
         <Drawer.Screen component={TabRoutes} name={navigationStrings.HOME} />
         <Drawer.Screen
           component={ProductDetailsScreen}
