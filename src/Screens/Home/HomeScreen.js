@@ -18,6 +18,12 @@ const HomeScreen = ({navigation}) => {
       title: 'Subscribe to my channel',
     });
   };
+  const goToScreenOfOtherStack = () => {
+    navigation.navigate(navigationStrings.PROFILE, {
+      screen: navigationStrings.EDIT_PROFILE,
+      params: {title: 'Edit profiel sreen'},
+    });
+  };
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -25,6 +31,9 @@ const HomeScreen = ({navigation}) => {
 
         <TouchableOpacity onPress={goToScreen}>
           <Text>Product Details</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={goToScreenOfOtherStack}>
+          <Text>go to edit profile of PROFILE stack</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </View>

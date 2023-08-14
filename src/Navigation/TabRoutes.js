@@ -6,6 +6,9 @@ import navigationStrings from '../constants/navigationStrings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import HomeStack from './HomeStack';
+import ProfileStack from './ProfileStack';
+import ExploreStack from './ExploreStack';
 const Tab = createBottomTabNavigator();
 
 function TabRoutes() {
@@ -28,7 +31,7 @@ function TabRoutes() {
       }}>
       <Tab.Screen
         name={navigationStrings.HOME}
-        component={HomeScreen}
+        component={HomeStack}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -43,7 +46,7 @@ function TabRoutes() {
       />
       <Tab.Screen
         name={navigationStrings.PROFILE}
-        component={ProfileScreen}
+        component={ProfileStack}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -58,7 +61,7 @@ function TabRoutes() {
       />
       <Tab.Screen
         name={navigationStrings.EXPLORE}
-        component={ExploreScreen}
+        component={ExploreStack}
         options={{
           tabBarIcon: ({focused}) => {
             return (
