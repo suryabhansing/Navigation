@@ -6,6 +6,8 @@ import navigationStrings from '../constants/navigationStrings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import Feather from 'react-native-vector-icons/Feather';
 import HomeStack from './HomeStack';
 import ProfileStack from './ProfileStack';
 import ExploreStack from './ExploreStack';
@@ -44,21 +46,7 @@ function TabRoutes() {
           },
         }}
       />
-      <Tab.Screen
-        name={navigationStrings.PROFILE}
-        component={ProfileStack}
-        options={{
-          tabBarIcon: ({focused}) => {
-            return (
-              <MaterialCommunityIcons
-                name="account-circle"
-                size={30}
-                color={focused ? 'red' : null}
-              />
-            );
-          },
-        }}
-      />
+
       <Tab.Screen
         name={navigationStrings.EXPLORE}
         component={ExploreStack}
@@ -67,6 +55,36 @@ function TabRoutes() {
             return (
               <MaterialCommunityIcons
                 name="shield-search"
+                size={30}
+                color={focused ? 'red' : null}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name={navigationStrings.FAVOURITE}
+        component={ExploreStack}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <Fontisto
+                name="favorite"
+                size={30}
+                color={focused ? 'red' : null}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name={navigationStrings.SETTING}
+        component={ExploreStack}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <Feather
+                name="settings"
                 size={30}
                 color={focused ? 'red' : null}
               />

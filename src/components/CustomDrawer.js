@@ -6,6 +6,7 @@ import {
 import React from 'react';
 import navigationStrings from '../constants/navigationStrings';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Image, Text, View} from 'react-native';
 
 function CustomDrawer(props) {
@@ -26,19 +27,38 @@ function CustomDrawer(props) {
         />
         <Text>USer Name</Text>
       </View>
-      {/* <DrawerItem
-        label={'Home'}
+      <DrawerItem
+        label={'Cart'}
         icon={() => <MaterialCommunityIcons name={'home'} size={25} />}
         labelStyle={{color: 'red', fontWeight: '200'}}
-        onPress={() => navigation.navigate(navigationStrings.HOME)}
-      /> */}
-      {/* <DrawerItem
-        label={'Profile'}
+        onPress={() => navigation.navigate(navigationStrings.CART)}
+      />
+      <DrawerItem
+        label={'About'}
         icon={() => (
           <MaterialCommunityIcons name={'face-man-profile'} size={25} />
         )}
         onPress={() => navigation.navigate(navigationStrings.PROFILE)}
-      /> */}
+      />
+      <DrawerItem
+        label={'Help'}
+        icon={() => (
+          <MaterialCommunityIcons name={'face-man-profile'} size={25} />
+        )}
+        onPress={() => navigation.navigate(navigationStrings.PROFILE)}
+      />
+      <DrawerItem
+        label={'Feedback'}
+        icon={() => (
+          <MaterialCommunityIcons name={'face-man-profile'} size={25} />
+        )}
+        onPress={() => navigation.navigate(navigationStrings.PROFILE)}
+      />
+      <DrawerItem
+        label={'Logout'}
+        icon={() => <MaterialIcons name={'logout'} size={25} />}
+        onPress={() => navigation.navigate(navigationStrings.PROFILE)}
+      />
     </DrawerContentScrollView>
   );
 }
