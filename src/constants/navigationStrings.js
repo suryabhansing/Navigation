@@ -9,4 +9,7 @@ export default {
   FAVOURITE: 'Favourite',
   SETTING: 'SETTING',
   CART: 'CART',
+  ABOUT: 'ABOUT',
+  HELP: 'HELP',
+  FEEDBACK: 'FEEDBACK',
 };

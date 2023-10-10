@@ -3,7 +3,7 @@ import React from 'react';
 import {Header} from 'react-native-elements';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const ExploreScreen = ({navigation}) => {
+const HelpScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -20,7 +20,7 @@ const ExploreScreen = ({navigation}) => {
           }
           placement="left"
           centerComponent={{
-            text: 'Explore',
+            text: 'Help',
             style: {
               color: '#fff',
               alignItems: 'center',
@@ -38,7 +38,7 @@ const ExploreScreen = ({navigation}) => {
   );
 };
 
-export default ExploreScreen;
+export default HelpScreen;
 
 const styles = StyleSheet.create({
   container: {

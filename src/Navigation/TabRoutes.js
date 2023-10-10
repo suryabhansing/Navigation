@@ -11,6 +11,9 @@ import Feather from 'react-native-vector-icons/Feather';
 import HomeStack from './HomeStack';
 import ProfileStack from './ProfileStack';
 import ExploreStack from './ExploreStack';
+import FavoriteScreen from '../Screens/Favorites/FavoriteScreen';
+import SettingScreen from '../Screens/Setting/SettingScreen';
+
 const Tab = createBottomTabNavigator();
 
 function TabRoutes() {
@@ -64,7 +67,7 @@ function TabRoutes() {
       />
       <Tab.Screen
         name={navigationStrings.FAVOURITE}
-        component={ExploreStack}
+        component={FavoriteScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -79,7 +82,7 @@ function TabRoutes() {
       />
       <Tab.Screen
         name={navigationStrings.SETTING}
-        component={ExploreStack}
+        component={SettingScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
